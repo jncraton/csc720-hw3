@@ -1,0 +1,78 @@
+CSC720 Homework 3
+=================
+
+Due Date: Tuesday, April 10, 2018 By Midnight
+
+(20 points) 1. Consider the grammar G given by
+
+S → ε | AB | XB
+
+T → AB | XB
+
+X → AT
+
+A → a
+
+B → b
+
+Is w = aaabbb in L(G)? Using CKY Algorithm to decide if w is in L(G). A
+CKY Triangular Table is shown in Table 1.
+
+  --- --- --- --- --- ---
+                      
+                      
+                      
+                      
+                      
+  a   a   a   b   b   b
+  --- --- --- --- --- ---
+
+1.  <span id="_Ref414632462" class="anchor"></span>CKY Triangular Table
+
+(20 points) 2. (Exercise 3.2) This exercise concerns TM M1, whose
+description and state diagram appear in Example 3.9. In each of the
+parts, give the sequence of configurations that M1 enters when started
+on the indicated input string.
+
+d\. 10\#11.
+
+e\. 10\#10.
+
+![](./media/image1.png){width="3.849557086614173in"
+height="2.942592957130359in"}
+
+(10 points) 3. What is Turing recognizable? What is Turing decidable?
+What is the difference between them?
+
+(10 points) 4. Let A={a^n^b^n^c^n^ | n ≥ 0 }.
+
+1.  Is A a regular language?
+
+2.  Is A a context free language?
+
+3.  Is A Turing recognizable?
+
+4.  Is A Turing decidable?
+
+(20 points) 5. (Exercise 4.6) Let X be the set {1, 2, 3, 4, 5} and Y be
+the set {6, 7, 8, 9, 10}. We describe the functions f : X→Y and g : X→Y
+in the following tables. Answer each part and give a reason for each
+negative answer.
+
+![](./media/image2.png){width="2.592919947506562in"
+height="1.1076552930883639in"}
+
+a\. Is f one-to-one?
+
+b\. Is f onto?
+
+c\. Is f a correspondence?
+
+d\. Is g one-to-one?
+
+e\. Is g onto?
+
+f\. Is g a correspondence?
+
+(20 points) 6. (Exercise 4.8) Let T = { (i, j, k) | i, j, k ϵ N}. Show
+that T is countable.
