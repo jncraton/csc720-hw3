@@ -3,31 +3,38 @@ CSC720 Homework 3
 
 Due Date: Tuesday, April 10, 2018 By Midnight
 
-(20 points) 1. Consider the grammar G given by
+(20 points) 1. 
+--------------
 
-S → ε | AB | XB
+Consider the grammar G given by:
 
-T → AB | XB
-
-X → AT
-
-A → a
-
-B → b
+    S → ε | AB | XB
+    T → AB | XB
+    X → AT
+    A → a
+    B → b
 
 Is w = aaabbb in L(G)? Using CKY Algorithm to decide if w is in L(G). A
 CKY Triangular Table is shown in Table 1.
 
-  --- --- --- --- --- ---
-                      
-                      
-                      
-                      
-                      
-  a   a   a   b   b   b
-  --- --- --- --- --- ---
 
-1.  <span id="_Ref414632462" class="anchor"></span>CKY Triangular Table
+w is in L(G) as shown by the following table. The top left position includes the start state, so we know that aaabbb is recognized by the grammar.
+
+    ┌─────┐
+    │ S,T │
+    ├─────┼─────┐
+    │ X   │     │
+    ├─────┼─────┼─────┐
+    │     │ S,T │     │
+    ├─────┼─────┼─────┼─────┐
+    │     │ X   │     │     │
+    ├─────┼─────┼─────┼─────┼─────┐
+    │     │     │ S,T │     │     │
+    ├─────┼─────┼─────┼─────┼─────┼─────┐
+    │ A   │ A   │ A   │ B   │ B   │ B   │
+    ├─────┼─────┼─────┼─────┼─────┼─────┤
+    │ a   │ a   │ a   │ b   │ b   │ b   │
+    └─────┴─────┴─────┴─────┴─────┴─────┘
 
 (20 points) 2. (Exercise 3.2) This exercise concerns TM M1, whose
 description and state diagram appear in Example 3.9. In each of the
