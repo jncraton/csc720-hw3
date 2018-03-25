@@ -3,7 +3,7 @@ CSC720 Homework 3
 
 Due Date: Tuesday, April 10, 2018 By Midnight
 
-(20 points) 1. 
+1. (20 points) 
 --------------
 
 Consider the grammar G given by:
@@ -20,23 +20,29 @@ CKY Triangular Table is shown in Table 1.
 
 w is in L(G) as shown by the following table. The top left position includes the start state, so we know that aaabbb is recognized by the grammar.
 
-    ┌─────┐
-    │ S,T │
-    ├─────┼─────┐
-    │ X   │     │
-    ├─────┼─────┼─────┐
-    │     │ S,T │     │
-    ├─────┼─────┼─────┼─────┐
-    │     │ X   │     │     │
-    ├─────┼─────┼─────┼─────┼─────┐
-    │     │     │ S,T │     │     │
-    ├─────┼─────┼─────┼─────┼─────┼─────┐
-    │ A   │ A   │ A   │ B   │ B   │ B   │
-    ├─────┼─────┼─────┼─────┼─────┼─────┤
-    │ a   │ a   │ a   │ b   │ b   │ b   │
-    └─────┴─────┴─────┴─────┴─────┴─────┘
 
-(20 points) 2. (Exercise 3.2) This exercise concerns TM M1, whose
+<pre style="line-height:1">
+┌─────┐
+│ S,T │
+├─────┼─────┐
+│ X   │     │
+├─────┼─────┼─────┐
+│     │ S,T │     │
+├─────┼─────┼─────┼─────┐
+│     │ X   │     │     │
+├─────┼─────┼─────┼─────┼─────┐
+│     │     │ S,T │     │     │
+├─────┼─────┼─────┼─────┼─────┼─────┐
+│ A   │ A   │ A   │ B   │ B   │ B   │
+├─────┼─────┼─────┼─────┼─────┼─────┤
+│ a   │ a   │ a   │ b   │ b   │ b   │
+└─────┴─────┴─────┴─────┴─────┴─────┘
+</pre>
+
+2. (20 points)
+--------------
+
+(Exercise 3.2) This exercise concerns TM M1, whose
 description and state diagram appear in Example 3.9. In each of the
 parts, give the sequence of configurations that M1 enters when started
 on the indicated input string.
@@ -48,18 +54,37 @@ e\. 10\#10.
 ![](./media/image1.png){width="3.849557086614173in"
 height="2.942592957130359in"}
 
-(10 points) 3. What is Turing recognizable? What is Turing decidable?
-What is the difference between them?
+3. (10 points)
+--------------
 
-(10 points) 4. Let A={a^n^b^n^c^n^ | n ≥ 0 }.
+> What is Turing recognizable? What is Turing decidable? What is the difference between them?
+
+A language L is Turing recognizable if there exists a Turing machine that will accept w for all w∈L. 
+
+A language is Turing decidable if there exists a Turing machine that can both accept all strings in the language and reject w for all w∈$\overline{L}$ in finite time.
+
+The key to decidability is that you must be able to design an algorithm that can finish executing with a guaranteed correct results. In the case of language, this means that the machine must halt and not loop indefinitely for all inputs.
+
+4. (10 points)
+-------------- 
+
+Let A={a^n^b^n^c^n^ | n ≥ 0 }.
 
 1.  Is A a regular language?
 
+No.
+
 2.  Is A a context free language?
+
+No.
 
 3.  Is A Turing recognizable?
 
+Yes.
+
 4.  Is A Turing decidable?
+
+Yes. I'm pretty sure just by looking at it, but a proof would be good. :)
 
 (20 points) 5. (Exercise 4.6) Let X be the set {1, 2, 3, 4, 5} and Y be
 the set {6, 7, 8, 9, 10}. We describe the functions f : X→Y and g : X→Y
