@@ -47,12 +47,44 @@ description and state diagram appear in Example 3.9. In each of the
 parts, give the sequence of configurations that M1 enters when started
 on the indicated input string.
 
+![](./media/image1.png)
+
 d\. 10\#11.
+
+     q₁ 10#11   
+    x q₃ 0#11
+    x0 q₃ #11
+    x0# q₅ 11
+    x0 q₆ #x1
+    x q₇ 0#x1
+     q₇ x0#x1
+    x q₁ 0#x1
+    xx q₂ #x1
+    xx# q₄ x1
+    Halted as reject
 
 e\. 10\#10.
 
-![](./media/image1.png){width="3.849557086614173in"
-height="2.942592957130359in"}
+     q₁ 10#10
+    x q₃ 0#10
+    x0 q₃ #10
+    x0# q₅ 10
+    x0 q₆ #x0
+    x q₇ 0#x0
+     q₇ x0#x0
+    x q₁ 0#x0
+    xx q₂ #x0
+    xx# q₄ x0
+    xx#x q₄ 0
+    xx# q₆ xx
+    xx q₆ #xx
+    x q₇ x#xx
+    xx q₁ #xx
+    xx# q₈ xx
+    xx#x q₈ x
+    xx#xx q₈
+    xx#xx qaccept
+    Halt as accept
 
 3. (10 points)
 --------------
