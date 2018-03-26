@@ -39,6 +39,8 @@ w is in L(G) as shown by the following table. The top left position includes the
 └─────┴─────┴─────┴─────┴─────┴─────┘
 </pre>
 
+w is in L(G).
+
 2. (20 points)
 --------------
 
@@ -118,25 +120,42 @@ Yes.
 
 Yes. I'm pretty sure just by looking at it, but a proof would be good. :)
 
-(20 points) 5. (Exercise 4.6) Let X be the set {1, 2, 3, 4, 5} and Y be
+5. (20 points) 
+--------------
+
+(Exercise 4.6) Let X be the set {1, 2, 3, 4, 5} and Y be
 the set {6, 7, 8, 9, 10}. We describe the functions f : X→Y and g : X→Y
 in the following tables. Answer each part and give a reason for each
 negative answer.
 
-![](./media/image2.png){width="2.592919947506562in"
-height="1.1076552930883639in"}
+![](./media/image2.png)
 
 a\. Is f one-to-one?
 
+No. 6 is the result of multiple values in the domain (1,3,5).
+
 b\. Is f onto?
+
+No. Several elements of Y are not reachable (8,9,10).
 
 c\. Is f a correspondence?
 
+CHECK Yes. A correspondence is any subset of the Cartesian product X×Y.
+
 d\. Is g one-to-one?
+
+Yes. Each element in the domain maps to exactly one element in the codomain.
 
 e\. Is g onto?
 
+Yes. Every element in Y is in the codomain and reachable from an element in the domain.
+
 f\. Is g a correspondence?
 
-(20 points) 6. (Exercise 4.8) Let T = { (i, j, k) | i, j, k ϵ N}. Show
+CHECK Yes. A correspondence is any subset of the Cartesian product X×Y.
+
+6. (20 points)
+--------------
+
+(Exercise 4.8) Let T = { (i, j, k) | i, j, k ϵ N}. Show
 that T is countable.
