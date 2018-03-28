@@ -97,7 +97,7 @@ A language L is Turing recognizable if there exists a Turing machine that will a
 
 A language is Turing decidable if there exists a Turing machine that can both accept all strings in the language and reject w for all w∈$\overline{L}$ in finite time.
 
-The key to decidability is that you must be able to design an algorithm that can finish executing with a guaranteed correct results. In the case of language, this means that the machine must halt and not loop indefinitely for all inputs.
+The key to decidability is that you must be able to design an algorithm that can finish executing with guaranteed correct results. In the case of language, this means that the machine must halt and not loop indefinitely for all inputs.
 
 4. (10 points)
 -------------- 
