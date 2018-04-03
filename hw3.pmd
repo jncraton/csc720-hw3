@@ -173,20 +173,30 @@ One simple way to consider this problem is by applying Cantor's diagonalization 
 Each diagonal is finite and enumerable, so we can create a bijective function that maps each item in T to an incrementally higher natural number as:
 
 ```python
+import itertools
 import math
 
 def f(n):
-  # Convert to 0-based counting
-  n = n - 1
+  max = 1 + int((n-1) ** (1/3))
 
-  # Calculate the current number system base
-  base = 1 + int(n ** (1/3))
+  i = 1 + math.floor((n-1) / max**2)
+  j = 1 + math.floor(((n-1) / max) % max)
+  k = 1 + ((n-1) % max)
 
-  i = math.floor(n / base**2)
-  j = math.floor((n / base) % base)
-  k = n % base
+  return (i, j, k)
 
-  return (i+1, j+1, k+1)
+  return max
+
+  items = []
+  
+  for diagonal in itertools.count():
+    for i in range(1, diagonal+1):
+      for j in range(1, diagonal+1):
+        for k in range(1, diagonal+1):
+          if (i,j,k) not in items:
+            items.append((i,j,k))
+            if len(items) == n:
+              return (i,j,k)
 
 for n in range(1, 25):
   print("f(%d) = %s" % (n, str(f(n))))
