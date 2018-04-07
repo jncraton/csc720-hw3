@@ -97,7 +97,7 @@ A language L is Turing recognizable if there exists a Turing machine that will a
 
 A language is Turing decidable if there exists a Turing machine that can both accept all strings in the language and reject w for all w∈$\overline{L}$ in finite time.
 
-The key to decidability is that you must be able to design an algorithm that can finish executing with guaranteed correct results. In the case of language, this means that the machine must halt and not loop indefinitely for all inputs.
+The key to decidability is that you must be able to design an algorithm that can finish executing with guaranteed correct results. In the case of language, this means that the machine must halt and not loop indefinitely for all inputs. It is not enough to simply never accept a language; the machine must actively halt and reject it.
 
 4. (10 points)
 -------------- 
@@ -164,10 +164,10 @@ T is countable if it is either finite or it has the same size as the set of nutu
 
 Remember that two sets have the same size if we can create a bijective function mapping one set to the other. A bijective function is one that is both injective (one-to-one) and surjective (onto). In essense, we will demonstrate that each element in T can be sequentially assigned to a natural number starting from 1.
 
-One simple way to consider this problem is by applying Cantor's diagonalization method. We will simply consider each "diagonal" to be the set of new items produced for an incremental maxiumum value of i, j, and k. For example:
+One simple way to consider this problem is by applying Cantor's diagonalization method. We will simply consider each "diagonal" to be the set of new items produced by including the next natural number as a maximal value of i, j, and k. For example:
 
-    "Diagonal" 1: [(1, 1, 1)]
-    "Diagonal" 2: [(2, 1, 1), (1, 2, 1), (1, 1, 2), (1, 2, 2), (2, 1, 2), (2, 2, 1), (2, 2, 2)]
+    "Diagonal" 1 (i,j,k ≤ 1): [(1, 1, 1)]
+    "Diagonal" 2 (i,j,k ≤ 2): [(2, 1, 1), (1, 2, 1), (1, 1, 2), (1, 2, 2), (2, 1, 2), (2, 2, 1), (2, 2, 2)]
     …
 
 Each "diagonal" is finite and enumerable, so we can create a bijective function that maps each item in T to an incrementally higher natural number as:
@@ -186,4 +186,4 @@ for diagonal in range(1, 4):
 print("…")
 ```
 
-This proves that T is countably infinite.
+The construction of our function makes it clear that it is both injective and surjective, thus proving that T is countably infinite.
