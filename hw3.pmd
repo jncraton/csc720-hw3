@@ -118,7 +118,7 @@ Yes. A Turing machine can be constructed to accept on any language in A.
 
 4.  Is A Turing decidable?
 
-Yes. Given a finite input string, a Turing machine can be contstructed to accept all strings in A and reject all strings not in A.
+Yes. Given a finite input string, a Turing machine can be constructed to accept all strings in A and reject all strings not in A.
 
 5. (20 points) 
 --------------
@@ -144,11 +144,11 @@ No. It is not both one-to-one and onto.
 
 d\. Is g one-to-one?
 
-Yes. Each element in the domain maps to exactly one element in the codomain.
+Yes. Each element in the domain maps to exactly one element in the co-domain.
 
 e\. Is g onto?
 
-Yes. Every element in Y is in the codomain and reachable from an element in the domain.
+Yes. Every element in Y is in the co-domain and reachable from an element in the domain.
 
 f\. Is g a correspondence?
 
@@ -160,9 +160,9 @@ Yes. It is both one-to-one and onto (bijective).
 (Exercise 4.8) Let T = { (i, j, k) | i, j, k ϵ ℕ}. Show
 that T is countable.
 
-T is countable if it is either finite or it has the same size as the set of nutural numbers (ℕ). T is clearly infinite as its members are drawn from ℕ, so we will show that it is countable by demonstrating that it is the same size as ℕ.
+T is countable if it is either finite or it has the same size as the set of natural numbers (ℕ). T is clearly infinite as its members are drawn from ℕ, so we will show that it is countable by demonstrating that it is the same size as ℕ.
 
-Remember that two sets have the same size if we can create a bijective function mapping one set to the other. A bijective function is one that is both injective (one-to-one) and surjective (onto). In essense, we will demonstrate that each element in T can be sequentially assigned to a natural number starting from 1.
+Remember that two sets have the same size if we can create a bijective function mapping one set to the other. A bijective function is one that is both injective (one-to-one) and surjective (onto). In essence, we will demonstrate that each element in T can be sequentially assigned to a natural number starting from 1.
 
 One simple way to consider this problem is by applying Cantor's diagonalization method. We will simply consider each "diagonal" to be the set of new items produced by including the next natural number as a maximal value of i, j, and k. For example:
 
